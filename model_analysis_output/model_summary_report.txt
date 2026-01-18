@@ -1,0 +1,173 @@
+================================================================================
+YOLOV11 MODEL ANALYSIS REPORT
+================================================================================
+Generated: 2025-11-11 16:52:55
+Model File: best.pt
+================================================================================
+
+1. MODEL ARCHITECTURE
+--------------------------------------------------------------------------------
+Total Parameters: 2,590,230
+Trainable Parameters: 0
+Model Size: 9.88 MB
+
+Layer Summary (Top 20):
+   1. model.7.conv                             Conv2d                            294,912
+   2. model.5.conv                             Conv2d                            147,456
+   3. model.20.conv                            Conv2d                            147,456
+   4. model.23.cv2.2.0.conv                    Conv2d                            147,456
+   5. model.9.cv2.conv                         Conv2d                            131,072
+   6. model.8.cv2.conv                         Conv2d                             98,304
+   7. model.22.cv1.conv                        Conv2d                             98,304
+   8. model.22.cv2.conv                        Conv2d                             98,304
+   9. model.23.cv2.1.0.conv                    Conv2d                             73,728
+  10. model.8.cv1.conv                         Conv2d                             65,536
+  11. model.10.cv1.conv                        Conv2d                             65,536
+  12. model.10.cv2.conv                        Conv2d                             65,536
+  13. model.13.cv1.conv                        Conv2d                             49,152
+  14. model.3.conv                             Conv2d                             36,864
+  15. model.8.m.0.m.0.cv1.conv                 Conv2d                             36,864
+  16. model.8.m.0.m.0.cv2.conv                 Conv2d                             36,864
+  17. model.8.m.0.m.1.cv1.conv                 Conv2d                             36,864
+  18. model.8.m.0.m.1.cv2.conv                 Conv2d                             36,864
+  19. model.17.conv                            Conv2d                             36,864
+  20. model.22.m.0.m.0.cv1.conv                Conv2d                             36,864
+
+2. TRAINING CONFIGURATION
+--------------------------------------------------------------------------------
+  agnostic_nms                  : False
+  amp                           : False
+  augment                       : False
+  auto_augment                  : randaugment
+  batch                         : 16
+  bgr                           : 0.0
+  box                           : 7.5
+  cache                         : False
+  cfg                           : None
+  classes                       : None
+  close_mosaic                  : 0
+  cls                           : 0.5
+  compile                       : False
+  conf                          : None
+  copy_paste                    : 0.0
+  copy_paste_mode               : flip
+  cos_lr                        : False
+  cutmix                        : 0.0
+  data                          : /kaggle/input/bodasdata/dataset/data.yaml
+  degrees                       : 0.0
+  deterministic                 : False
+  device                        : 0
+  dfl                           : 1.5
+  dnn                           : False
+  dropout                       : 0.0
+  dynamic                       : False
+  embed                         : None
+  epochs                        : 60
+  erasing                       : 0.4
+  exist_ok                      : True
+  fliplr                        : 0.5
+  flipud                        : 0.0
+  format                        : torchscript
+  fraction                      : 1.0
+  freeze                        : None
+  half                          : False
+  hsv_h                         : 0.015
+  hsv_s                         : 0.7
+  hsv_v                         : 0.4
+  imgsz                         : 640
+  int8                          : False
+  iou                           : 0.7
+  keras                         : False
+  kobj                          : 1.0
+  line_width                    : None
+  lr0                           : 0.01
+  lrf                           : 0.01
+  mask_ratio                    : 4
+  max_det                       : 300
+  mixup                         : 0.0
+  mode                          : train
+  model                         : yolo11n.pt
+  momentum                      : 0.937
+  mosaic                        : 1.0
+  multi_scale                   : False
+  name                          : pothole_crack_detector
+  nbs                           : 64
+  nms                           : False
+  opset                         : None
+  optimize                      : False
+  optimizer                     : auto
+  overlap_mask                  : True
+  patience                      : 20
+  perspective                   : 0.0
+  plots                         : True
+  pose                          : 12.0
+  pretrained                    : True
+  profile                       : False
+  project                       : None
+  rect                          : False
+  resume                        : False
+  retina_masks                  : False
+  save                          : False
+  save_conf                     : False
+  save_crop                     : False
+  save_dir                      : /kaggle/working/runs/detect/pothole_crack_detector
+  save_frames                   : False
+  save_json                     : False
+  save_period                   : -1
+  save_txt                      : False
+  scale                         : 0.5
+  seed                          : 0
+  shear                         : 0.0
+  show                          : False
+  show_boxes                    : True
+  show_conf                     : True
+  show_labels                   : True
+  simplify                      : True
+  single_cls                    : False
+  source                        : None
+  split                         : val
+  stream_buffer                 : False
+  task                          : detect
+  time                          : None
+  tracker                       : botsort.yaml
+  translate                     : 0.1
+  val                           : True
+  verbose                       : True
+  vid_stride                    : 1
+  visualize                     : False
+  warmup_bias_lr                : 0.1
+  warmup_epochs                 : 3.0
+  warmup_momentum               : 0.8
+  weight_decay                  : 0.0005
+  workers                       : 0
+  workspace                     : None
+
+3. DATASET CONFIGURATION
+--------------------------------------------------------------------------------
+  train                         : images/train
+  val                           : images/val
+  test                          : images/test
+  nc                            : 2
+  names                         : ['pothole', 'crack']
+
+4. PERFORMANCE METRICS
+--------------------------------------------------------------------------------
+  epoch                         : 60.000000
+  lr/pg0                        : 0.000044
+  lr/pg1                        : 0.000044
+  lr/pg2                        : 0.000044
+  metrics/mAP50(B)              : 0.749480
+  metrics/mAP50-95(B)           : 0.476540
+  metrics/precision(B)          : 0.811230
+  metrics/recall(B)             : 0.700040
+  time                          : 8849.180000
+  train/box_loss                : 1.173770
+  train/cls_loss                : 1.129300
+  train/dfl_loss                : 1.336750
+  val/box_loss                  : 1.494300
+  val/cls_loss                  : 1.168320
+  val/dfl_loss                  : 1.684080
+
+================================================================================
+END OF REPORT
+================================================================================
